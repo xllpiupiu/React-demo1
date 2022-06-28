@@ -1,0 +1,20 @@
+{
+  "name": "react-demo1",
+  "version": "1.0.0",
+  "description": "测试Webpack创建react项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xllpiupiu/React-demo1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xllpiupiu/React-demo1/issues"
+  },
+  "homepage": "https://github.com/xllpiupiu/React-demo1#readme"
+}
