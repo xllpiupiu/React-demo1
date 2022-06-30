@@ -3,7 +3,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: {
-        index: "./src/index.js",
+        index: "./src/index.tsx",
+    },
+    resolve: {
+        extensions: [".js", ".json", ".jsx", ".tsx", ".ts"],
     },
     module: {
         rules: [
@@ -20,12 +23,20 @@ module.exports = {
                 type: "asset/resource"
             },
             {
-                test: /\.js|jsx$/,
+                test: /\.(t|j)sx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
-                    options:  {
-                        presets: ["@babel/preset-env", "@babel/preset-react"]
+                    options: {
+                        presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
+                        plugins: [
+                            [
+                                "@babel/plugin-transform-runtime",
+                                {
+                                    "regenerator": true
+                                }
+                            ]
+                        ]
                     }
                 }
             }
