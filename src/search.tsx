@@ -37,6 +37,7 @@ export default class SearchInput extends React.Component<any, isState> {
         //调用父组件函数
         this.setState({ inVal: e.target.value})
         // this.props.onSearch(e.target.value);
+        this.props.onSearch(e.target.value);
         clearTimeout(this.timer);
         this.timer = setTimeout(async () => {
             if (this.state.ifConfirm) {
