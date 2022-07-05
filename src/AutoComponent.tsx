@@ -46,7 +46,6 @@ export default class AutoComponent extends React.Component<any, isState> {
                 <div style={{ display: this.state.isShow }}>
                     <MatchSearch searchRe={this.state.searchRe} searchVal={this.state.searchVal}/>
                 </div>
-
             </div>
         );
     }

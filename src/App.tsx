@@ -7,7 +7,6 @@ export default class App extends React.Component<any> {
 
     }
 
-
     render() {
         return (
             <AutoComponent />
